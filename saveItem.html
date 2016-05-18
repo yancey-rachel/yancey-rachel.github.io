@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Local Storage</title>
+</head>
+<body>
+<form>
+<h1> Please enter ingredients:</h1>
+<input id="item1" type="text"/>
+<input id="item2" type="text"/>
+<button onclick="storeitems()"> Delicious </button>   
+<a href= "retrievelItem.html">retrieve</a>
+</form>
+<form action="/Rachelsblog/retrievelItem.html">
+<input type="submit" value="retrieveItem">
+</form>
+
+<script>
+
+
+
+//function additem(){
+	//ingredient1.push(ingredientinput1.value);
+	//ingredient2.push(ingredientinput2.value);
+//}
+
+function storeditems(){
+	var item1 =localStorage.getItem('ingredientinput1', 'item1');
+	var item2 =localStorage.getItem('ingredientinput2', 'item2');
+}
+
+
+</script>
+
+
+
+</body>
+</html>
