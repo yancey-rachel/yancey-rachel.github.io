@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Retrieve Data</title>
+</head>
+
+<body onload="getItems()">
+<script type="text/javascript">
+function getItems(){
+	 
+	 var storedElement1 = localStorage.getItem('element1');
+	 var storedElement2 = localStorage.getItem('element2');
+	 if(storedElement1){
+		 document.getElementById('item1').value = storedElement1;
+	 }
+	 if(storedElement2){
+		 document.getElementById('item2').value = storedElement2;
+	 }
+	
+</script>
+</body>
+</html>
