@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>JavaScript Objects</h1>
+<p>JavaScript Objects are objects that contain variables. Basic syntax is 
+&nbsp; var (name of variable) = values 
+&nbsp; Below is an example of using JavaScript Objects</p>
+<p id="JavaScriptObject1"></p>
+<script>
+function JavaScriptObjects(){
+// establishing varible objects
+var superhero, marvelleng, line, i;
+//An array of values
+superhero= ["Captain America", "Thor", "Iron Man", "Black Widow", "Hulk", "Falcon"];
+//naming the values in superhero for the FOR loop
+marvelleng= superhero.length;
+//for loop show display the array superhero
+line= "<ul>";
+for (i=0; i< marvelleng; i++){
+	line+= "<li>"+ superhero[i]+ "</li>" ;
+}
+line +="</ul>";
+document.getElementById("JavaScriptObject1").innerHTML = line;
+}
+
+
+
+function Associate_Arrays (){
+	var student = new Array();
+	var sentence;
+	student["name"]= "Rachel";
+student["major"]="English";
+
+sentence= (student["name"] + " is studying " + student["major"]);
+document.getElementById("AA").innerHTML = sentence;
+}
+</script>
+<p id="AA"></p>
+
+<button onclick="Associate_Arrays()">Associate_Arrays</button>
+<button onclick="JavaScriptObjects()">JavaScriptO</button>
+</body>
+</html>
