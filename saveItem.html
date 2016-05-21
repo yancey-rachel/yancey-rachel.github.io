@@ -11,7 +11,7 @@ var	superhero= ["Captain America", "Thor", "Iron Man", "Black Widow", "Hulk", "F
 	localStorage.setItem("heros",JSON.stringify(superhero));
 	var getData = localStorage.getItem("heros");
 	var sh = JSON.parse(getData);
-       alert(sh.length);
+       document.getElementById("s").innerHTML = sh;
 
 }
 	
@@ -23,7 +23,7 @@ var	superhero= ["Captain America", "Thor", "Iron Man", "Black Widow", "Hulk", "F
 <form >  
 
 <button onclick="storeditems()"> Heros! </button> 
-
+<p id="s"></p>
 </form>
 
 
