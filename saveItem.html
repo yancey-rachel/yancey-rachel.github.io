@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Local Storage</title>
+</head>
+<script>
+
+function storeditems(){
+var	superhero= ["Captain America", "Thor", "Iron Man", "Black Widow", "Hulk", "Falcon"];
+	localStorage.setItem("heros",JSON.stringify(superhero));
+
+}
+	
+
+</script>
+
+
+<body >
+<form >  
+
+<button onclick="storeditems()"> SaveComponents </button> 
+
+</form>
+
+
+
+
+</body>
+</html>
