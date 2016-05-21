@@ -9,6 +9,8 @@
 function storeditems(){
 var	superhero= ["Captain America", "Thor", "Iron Man", "Black Widow", "Hulk", "Falcon"];
 	localStorage.setItem("heros",JSON.stringify(superhero));
+	var getData = localStorage.getItem("heros");
+        document.getElementById(getData);
 
 }
 	
@@ -19,7 +21,7 @@ var	superhero= ["Captain America", "Thor", "Iron Man", "Black Widow", "Hulk", "F
 <body >
 <form >  
 
-<button onclick="storeditems()"> SaveComponents </button> 
+<button onclick="storeditems()"> Heros! </button> 
 
 </form>
 
