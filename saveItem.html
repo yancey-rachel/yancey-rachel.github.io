@@ -9,8 +9,15 @@
 function storeditems(){
 	var ingredient1 = document.getElementById(item1).value;
 	var ingredient2 = document.getElementById(item2).value;
-	localStorage.setItem('element1', 'ingredient1');
-	localStorage.setItem('element2', 'ingredient2');
+	var food = [ingredient1,ingredient2];
+	localStorage.setItem('elements', JSON.stringify(food));
+	var getFood = localStorage.getItem('elements');
+	var display = JSON.parse(getFood);
+     var show = display.length;
+     document.getElementById('gotfood').innerHTML = show;
+
+//	localStorage.setItem('element1', 'ingredient1');
+//	localStorage.setItem('element2', 'ingredient2');
 }
 
 </script>
@@ -24,7 +31,7 @@ function storeditems(){
 <button onclick="storeditems()"> SaveComponents </button>   
 
 </form>
-
+<p id="gotfood"></p>
 
 </body>
 </html>
