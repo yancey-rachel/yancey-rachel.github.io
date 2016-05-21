@@ -5,12 +5,12 @@
 <title>Local Storage</title>
 </head>
 <script>
-ingredient1 = document.getElementById(item1).value;
-ingredient2 = document.getElementById(item2).value;
-food = [ ingredient1, ingredient2];
+var ingredient1 = document.getElementById(item1).value;
+var ingredient2 = document.getElementById(item2).value;
+var food = [ ingredient1, ingredient2];
 f(food);
 function food(){
-	localStorage.setItem('element1', JSON.stringify(arguments.length));
+	localStorage.setItem('element1', JSON.stringify(param));
 //	 getFood = localStorage.getItem('elements');
 //	display = JSON.parse(getFood);
 //	  show = display.length;
