@@ -10,8 +10,10 @@ function storeditems(){
 	var ingredient1, ingredient2, food, getFood,display, show;
 	ingredient1 = document.getElementById(item1).value;
 	ingredient2 = document.getElementById(item2).value;
-	 food = [ ingredient1 , ingredient2 ];
-	localStorage.setItem('elements', JSON.stringify(food));
+	 food1=[ ingredient1 ];
+	 food2=[ ingredient2 ];
+	localStorage.setItem('element1', JSON.stringify(food1));
+	localStorage.setItem('element2', JSON.stringify(food2));
 //	 getFood = localStorage.getItem('elements');
 //	display = JSON.parse(getFood);
 //	  show = display.length;
