@@ -5,15 +5,12 @@
 <title>Local Storage</title>
 </head>
 <script>
-
-function storeditems(){
-	var ingredient1, ingredient2, food, getFood,display, show;
-	ingredient1 = document.getElementById(item1).value;
-	ingredient2 = document.getElementById(item2).value;
-	 food1=[ ingredient1 ];
-	 food2=[ ingredient2 ];
-	localStorage.setItem('element1', JSON.stringify(food1));
-	localStorage.setItem('element2', JSON.stringify(food2));
+ingredient1 = document.getElementById(item1).value;
+ingredient2 = document.getElementById(item2).value;
+food = [ ingredient1, ingredient2];
+f(food);
+function food(){
+	localStorage.setItem('element1', JSON.stringify(arguments.length));
 //	 getFood = localStorage.getItem('elements');
 //	display = JSON.parse(getFood);
 //	  show = display.length;
@@ -34,7 +31,7 @@ function storeditems(){
 <input id="item1" type="text"/>
 <input id="item2" type="text"/>
 
-<button onclick="storeditems()"> SaveComponents </button>   
+<button onclick="food()"> SaveComponents </button>   
 
 </form>
 <p id="gotfood"></p>
