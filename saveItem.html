@@ -10,7 +10,8 @@ function storeditems(){
 var	superhero= ["Captain America", "Thor", "Iron Man", "Black Widow", "Hulk", "Falcon"];
 	localStorage.setItem("heros",JSON.stringify(superhero));
 	var getData = localStorage.getItem("heros");
-        document.getElementById("S").innerHTML = getData;
+	var sh = JSON.parse(getData);
+        document.getElementById("S").innerHTML = sh.length;
 
 }
 	
