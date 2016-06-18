@@ -2,23 +2,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>JSON</title>
+<title>JSON_Serialization</title>
 </head>
-<script type="text/javascript">
-function newlist(){
-	var newmarvel = [];
-	newmarvel.a = "Gamora";
-	newmarvel.b = "Groot";
-	newmarvel.c = "Drax the Destroyer";
-	newmarvel.d = "Rocket Raccoon";
-	var JSON = JSON.stringify(newmarvel);
-	var JSON_JS = JSON.parse(JSON);
-	alert(JSON_JS);
-	
-}
-</script>
 <body>
+<p id="print"></p>
+<script type="text/javascript">
+var names = [ 
+                    {"teamone":"Gamora"},
+                    {"teamtwo":"Groot"},
+                    {"teamthree":"Drax the Destroyer"},
+                    {"teamfour":"Rocket Raccoon"}
+             ];
 
-<button onclick="newlist()">JSON</button>
+document.getElementById("print").innerHTML =names[0].teamone + "<br>" + names[1].teamtwo + "<br>" + names[2].teamthree + "<br>"+ names[3].teamfour;
+</script>
+
+
+
 </body>
 </html>
