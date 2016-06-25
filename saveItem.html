@@ -11,12 +11,14 @@
 </style>
 </head>
 <script>
+//This is where I made changes to my code
 document.getElementById("image1").src= "avengers.jpg";
 document.getElementById("colors").style.backgroundColor= "mint";
 
 //This function is storing the superhero array and then spits out the data that was saved in local storage
 function storeditems(){
 var	superhero= [" Captain America ", " Thor ", " Iron Man ", " Black Widow ", " Hulk ", " Falcon "];
+//using JSON here as well
 	localStorage.setItem("heros",JSON.stringify(superhero));
 	var getData = localStorage.getItem("heros");
 	var sh = JSON.parse(getData);
