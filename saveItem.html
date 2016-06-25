@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Local Storage/Associative Arrays</title>
+<style>
+#colors {
+ background-color: #beefed;
+}
+
+</style>
 </head>
 <script>
+document.getElementById("image1").src= "avengers.jpg";
+document.getElementById("colors").style.backgroundColor= "mint";
+
 //This function is storing the superhero array and then spits out the data that was saved in local storage
 function storeditems(){
 var	superhero= [" Captain America ", " Thor ", " Iron Man ", " Black Widow ", " Hulk ", " Falcon "];
@@ -18,6 +27,8 @@ var	superhero= [" Captain America ", " Thor ", " Iron Man ", " Black Widow ", " 
 
 
 <body >
+<div id="colors">
+<img id="image1" src="avengers.jpg" />
 <form >  
 
 <button onclick="storeditems()"> Heros! </button> 
@@ -26,6 +37,6 @@ var	superhero= [" Captain America ", " Thor ", " Iron Man ", " Black Widow ", " 
 
 <p>To view the array that it has been saved. You can look by right clicking -> resources -> Local Storage</p>
 
-
+</div>
 </body>
 </html>
