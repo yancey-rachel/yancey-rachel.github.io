@@ -6,6 +6,7 @@
 </head>
 <body>
 <p id="print"></p>
+<button onclick="ajax()">CLick</button>
 <script type="text/javascript">
 var names = [ 
                     {"teamone":"Gamora"},
@@ -15,6 +16,27 @@ var names = [
              ];
 
 document.getElementById("print").innerHTML =names[0].teamone + "<br>" + names[1].teamtwo + "<br>" + names[2].teamthree + "<br>"+ names[3].teamfour;
+function ajax(){
+    var xml;
+	try{    
+		xml = new XMLHttpRequest();
+		}
+catch(e){
+	try{ 
+		xml = new ActiveXObject("Msxml2.XMLHTTP");
+	}
+catch(e){
+	 try{
+		 xml = new ActiveXObject("Microsoft.XMLHTTP");
+	 	}
+	 catch(e){
+		 alert("Somethings wrong");
+		 return false;
+	  }
+	}
+}
+   
+};
 </script>
 
 
