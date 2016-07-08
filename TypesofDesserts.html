@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sweets</title>
+<script type="text/javascript">
+	xmlhttp = new XMLHttpRequest();
+		function viewdessert(){
+			xmlhttp.onreadystatechange = 
+				function(){
+				if(xmlhttp.readyState == 4 && xmlhttp.status==200)
+					{
+					document.getElementById('sweets').innerHTML=xmlhttp.responseText;
+					}else
+						{
+						document.getElementById('sweets').innerHTML = "Please wait...thanks for your patiences";
+						}
+			}
+		xmlhttp.open("GET","Desserts.html", true);
+		xmlhttp.send();
+		}
+</script>
+</head>
+<body>
+<div id="sweets">
+</div>
+<input type="button" value= "Get Dessert!" onclick= "viewdessert">
+</body>
+</html>
