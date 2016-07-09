@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function welcome(){
+	alert("Welcome! Page has been loaded")
+}
+function loading(url) {
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (xhttp.readyState == 4 && xhttp.status == 200) {
+	      document.getElementById("ajax").innerHTML = xhttp.responseText;
+	    }
+	  };
+	  xhttp.open("GET", "http://localhost:8080/Rachelsblog/ajax_text", true);
+	  xhttp.send();
+	}
+</script>
+<meta charset="UTF-8">
+<title>Integrate code 1</title>
+</head>
+<body onload= "welcome()">
+<button type="button" onclick="loading()">VIEW NAMES</button>
+<div id="ajax">
+<h1>View List of Names:</h1>
+</div>
+</body>
+</html>

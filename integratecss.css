@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+img:hover{
+	
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	
+	
+}
+div#mydiv:hover{
+	background-color: #6c3483;
+}
