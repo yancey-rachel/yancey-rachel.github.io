@@ -6,13 +6,15 @@ function welcome(){
 	alert("Welcome! Page has been loaded")
 }
 function loading(url) {
+	  var dataf = "http://localhost:8080/Rachelsblog/ajax_text"
 	  var xhttp = new XMLHttpRequest();
 	  xhttp.onreadystatechange = function() {
-	    if (xhttp.readyState == 4 && xhttp.status == 200) {
-	      document.getElementById("ajax").innerHTML = xhttp.responseText;
+	    if (xhttp.readyState == 4) {
+	    	var jsonObj = JSON.parse(xhttp.responseText);
+	      document.getElementById("ajax").innerHTML = jsonObj.Name;
 	    }
 	  };
-	  xhttp.open("GET", "ajax_text", true);
+	  xhttp.open("GET", dataf, true);
 	  xhttp.send();
 	}
 </script>
